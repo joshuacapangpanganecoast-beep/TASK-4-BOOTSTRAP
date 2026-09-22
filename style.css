@@ -1,0 +1,50 @@
+/* Fade-in animation for header */
+header {
+  animation: fadeInDown 2s ease-in-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Card hover effect */
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Smooth list animation */
+ul li {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: slideIn 0.5s forwards;
+}
+ul li:nth-child(1) { animation-delay: 0.3s; }
+ul li:nth-child(2) { animation-delay: 0.6s; }
+ul li:nth-child(3) { animation-delay: 0.9s; }
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Footer glow effect */
+footer {
+  animation: glow 3s infinite alternate;
+}
+@keyframes glow {
+  from { background-color: #212529; }
+  to { background-color: #343a40; }
+}
